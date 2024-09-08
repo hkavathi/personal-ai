@@ -21,7 +21,7 @@ useEffect(() => {
       setLoading(true);
 
       try {
-        const response = await axios.post('https://c2pisawnsb.execute-api.us-east-2.amazonaws.com/dev/chat', {
+        const response = await axios.post('https://i4xit3cmvb.execute-api.us-east-2.amazonaws.com/prod/chat', {
           question: message,
           history: chatHistory.map((msg) => msg.text),
         }, {
