@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/personal-ai/static/css/main.f5a01d8f.css",
-    "main.js": "/personal-ai/static/js/main.91f8c5aa.js",
+    "main.js": "/personal-ai/static/js/main.c462fe23.js",
     "static/js/453.8fa34fb1.chunk.js": "/personal-ai/static/js/453.8fa34fb1.chunk.js",
     "static/media/harshit_image.jpeg": "/personal-ai/static/media/harshit_image.460741294a2d208fd296.jpeg",
     "index.html": "/personal-ai/index.html",
     "main.f5a01d8f.css.map": "/personal-ai/static/css/main.f5a01d8f.css.map",
-    "main.91f8c5aa.js.map": "/personal-ai/static/js/main.91f8c5aa.js.map",
+    "main.c462fe23.js.map": "/personal-ai/static/js/main.c462fe23.js.map",
     "453.8fa34fb1.chunk.js.map": "/personal-ai/static/js/453.8fa34fb1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f5a01d8f.css",
-    "static/js/main.91f8c5aa.js"
+    "static/js/main.c462fe23.js"
   ]
 }
