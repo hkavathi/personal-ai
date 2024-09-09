@@ -1,4 +1,3 @@
-/* General Style: Use rem units for better scaling */
 body {
   margin: 0;
   padding: 0;
@@ -6,8 +5,8 @@ body {
   font-size: 16px; /* Base font size (1rem = 16px) */
 }
 
-/* Adjust home-background for better responsiveness */
 .home-background {
+  position: relative;
   background: url('./assets/harshit_image.jpeg') no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
@@ -21,65 +20,308 @@ body {
 }
 
 .overlay {
-  background: rgba(255, 255, 255, 0.5); 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5); /* White overlay with 50% opacity */
+  z-index: 1; /* Make sure the overlay is on top of the background image but behind content */
 }
 
-/* Use rem for font sizes to scale with screen */
+.chatting-background {
+  background-color: #f6d365;
+  background-size: cover;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Smooth sliding transition for the background */
+.slide-out {
+  transform: translateX(-100%);
+}
+
 .home-content h1 {
+  position:relative;
   font-family: 'Times New Roman', serif;
   font-size: 2.5rem; /* Responsive font size */
   margin: 0;
   color: #030303;
-}
-
-.home-content p {
-  font-size: 1.2rem; /* Adjusted for responsiveness */
+  z-index: 1;
 }
 
 .chat-container {
   width: 80%; /* Adjust width to percentage */
-  margin: 20px auto;
+  margin: 50px auto;
+  text-align: left;
+}
+
+.chat-history {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
 }
 
 .chat-message {
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  max-width: 70%;
+  word-wrap: break-word;
 }
 
-.user-message, .bot-message {
-  max-width: 90%; /* Adjust width for smaller screens */
+.user-message {
+  background-color: #007bff;
+  color: white;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.bot-message {
+  background-color: #e9ecef;
+  color: #333;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+.home-content p {
+  position:relative;
+  font-family: 'Times New Roman', sans-serif;
+  color: #010000;
+  font-size: 1.2rem; /* Adjusted for responsiveness */
+  margin: 10px 0;
+  z-index: 1;
+}
+
+.typing-indicator {
+  background-color: #f0f0f0;
+  color: #000000;
+  align-self: flex-start;
+  margin-right: auto;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+}
+
+.typing-indicator .dot {
+  animation: blink 1s infinite both;
+  margin-left: 3px;
+}
+
+.typing-indicator .dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator .dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.chat-input {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-input input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.chat-input button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: #0056b3;
+}
+
+.dynamic-text {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.8rem;
+  color: #000000;
+  margin: 20px 0;
+  position: relative;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  from { border-right-color: rgba(0, 123, 255, 0.75); }
+  to { border-right-color: transparent; }
+}
+
+#changing-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid rgba(238, 231, 231, 0.958);
+  animation: typing 2s steps(30, end), blink 0.75s step-end infinite;
 }
 
 .social-buttons {
-  margin-top: 1rem;
+  position:relative;
+  margin-top: 20px;
+  z-index: 2;
 }
 
-/* Main buttons: Use rem units for sizes */
+.social-btn {
+  display: inline-flex; /* Use flexbox */
+  align-items: center;  /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+  margin: 10px;
+  padding: 1rem; /* Adjusted padding */
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50%;
+  width: 3.75rem; /* Responsive width */
+  height: 3.75rem; /* Responsive height */
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.social-btn i {
+  display: block;         /* Ensure the icon is treated as a block element */
+  margin: 0 auto;         /* Horizontally center the icon */
+  font-size: 4rem;        /* Icon size */
+}
+
+.social-btn:hover {
+  width: 10rem;
+  border-radius: 30px;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+.social-btn span {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  width: 0;
+  margin-left: 10px;
+  opacity: 0;
+}
+
+.social-btn:hover span {
+  width: auto;
+  opacity: 1;
+}
+
+.linkedin-btn {
+  background-color: #0077b5;
+}
+
+.github-btn {
+  background-color: #333;
+}
+
+/* App.css */
+.main-buttons {
+  position: fixed;
+  top: 50%; /* Center vertically */
+  left: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
 .main-buttons .home-btn,
 .main-buttons .start-chat-btn,
 .main-buttons .download-resume-btn {
-  width: 3.75rem; /* 60px -> rem units */
-  height: 3.75rem;
-  font-size: 1.2rem; 
+  display: inline-flex;  /* Keep flex display */
+  align-items: center;   /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+  margin: 10px 0;
   padding: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50%; /* Start with circular buttons */
+  width: 3.75rem; /* Responsive width */
+  height: 3.75rem; /* Responsive height */
+  background-color: #007bff; /* Default button color */
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.main-buttons .home-btn i,
+.main-buttons .start-chat-btn i,
+.main-buttons .download-resume-btn i {
+  display: block;         /* Ensure the icon is treated as a block element */
+  margin: 0 auto;         /* Horizontally center the icon */
+  font-size: 4rem;        /* Icon size */
 }
 
 .main-buttons .home-btn:hover,
 .main-buttons .start-chat-btn:hover,
 .main-buttons .download-resume-btn:hover {
-  width: 15.625rem; /* 250px -> rem units */
+  width: 15.625rem; /* Expand horizontally on hover */
+  border-radius: 30px;
+  justify-content: flex-start;
+  padding-left: 20px;
 }
 
-/* Responsive social buttons */
-.social-btn {
-  width: 3.75rem; /* 60px -> rem units */
-  height: 3.75rem;
-  font-size: 1.2rem;
-  padding: 1rem;
+.main-buttons .home-btn span,
+.main-buttons .start-chat-btn span,
+.main-buttons .download-resume-btn span {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+  opacity: 0;
 }
 
-.social-btn:hover {
-  width: 10rem; /* Adjust hover size */
+.main-buttons .home-btn:hover span,
+.main-buttons .start-chat-btn:hover span,
+.main-buttons .download-resume-btn:hover span {
+  opacity: 1;
+}
+
+.main-buttons .home-btn i,
+.main-buttons .start-chat-btn i,
+.main-buttons .download-resume-btn i {
+  font-size: 4rem;
+}
+
+/* Individual button background colors */
+.main-buttons .home-btn {
+  background-color: #007bff;
+}
+
+.main-buttons .start-chat-btn {
+  background-color: #17a2b8;
+}
+
+.main-buttons .download-resume-btn {
+  background-color: #28a745;
 }
 
 /* Media queries for responsiveness */
