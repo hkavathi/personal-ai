@@ -48,7 +48,7 @@ function App() {
         <button className="start-chat-btn" onClick={startChat}>
           <FaRobot /><span>Chat about me with AI</span>
         </button>
-        <button className="download-resume-btn" onClick={() => window.open('/Harshit_resume.pdf', '_blank')}>
+        <button className="download-resume-btn" onClick={() => window.open('${process.env.PUBLIC_URL}/Harshit_resume.pdf', '_blank')}>
           <FaFileAlt /><span>Download my resume</span>
         </button>
       </div>
