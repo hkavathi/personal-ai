@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/personal-ai/static/css/main.bb154309.css",
-    "main.js": "/personal-ai/static/js/main.09fb21c1.js",
+    "main.css": "/personal-ai/static/css/main.fcccceb5.css",
+    "main.js": "/personal-ai/static/js/main.6f5503f8.js",
     "static/js/453.8fa34fb1.chunk.js": "/personal-ai/static/js/453.8fa34fb1.chunk.js",
     "static/media/harshit_image.jpeg": "/personal-ai/static/media/harshit_image.460741294a2d208fd296.jpeg",
     "index.html": "/personal-ai/index.html",
-    "main.bb154309.css.map": "/personal-ai/static/css/main.bb154309.css.map",
-    "main.09fb21c1.js.map": "/personal-ai/static/js/main.09fb21c1.js.map",
+    "main.fcccceb5.css.map": "/personal-ai/static/css/main.fcccceb5.css.map",
+    "main.6f5503f8.js.map": "/personal-ai/static/js/main.6f5503f8.js.map",
     "453.8fa34fb1.chunk.js.map": "/personal-ai/static/js/453.8fa34fb1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb154309.css",
-    "static/js/main.09fb21c1.js"
+    "static/css/main.fcccceb5.css",
+    "static/js/main.6f5503f8.js"
   ]
 }
