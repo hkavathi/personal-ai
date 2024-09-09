@@ -190,7 +190,7 @@ body {
   align-items: center;  /* Vertically center the content */
   justify-content: center; /* Horizontally center the content */
   margin: 10px;
-  padding: 1rem; /* Adjusted padding */
+  padding: 0.25rem; /* Adjusted padding */
   font-size: 1.2rem;
   border: none;
   border-radius: 50%;
@@ -202,11 +202,12 @@ body {
   position: relative;
   transition: all 0.3s ease;
   text-align: center;
+  padding-left: 20px;
 }
 
 .social-btn svg {
   margin-right: 10px; /* Add space between icon and text */
-  font-size: 2rem;        /* Icon size */
+  font-size: 1.2rem;        /* Icon size */
 }
 
 .social-btn:hover {
@@ -255,35 +256,28 @@ body {
 .main-buttons .download-resume-btn {
   display: inline-flex;  /* Keep flex display */
   align-items: center;   /* Vertically center the content */
-  justify-content: center; /* Horizontally center the content */
+  justify-content: flex-start; /* Horizontally center the content */
   margin: 10px 0;
-  padding: 1rem;
+  padding: 2rem;
   font-size: 1.2rem;
   border: none;
-  border-radius: 50%; /* Start with circular buttons */
-  width: 3.75rem; /* Responsive width */
+  border-radius: 30px; /* Start with circular buttons */
+  width: 18rem; /* Responsive width */
   height: 3.75rem; /* Responsive height */
   background-color: #007bff; /* Default button color */
   color: #fff;
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease;
+  padding-left: 20px;
 }
 
 .main-buttons .home-btn svg,
 .main-buttons .start-chat-btn svg,
 .main-buttons .download-resume-btn svg {
   margin-right: 10px; /* Add space between icon and text */
-  font-size: 2rem;        /* Icon size */
-}
-
-.main-buttons .home-btn:hover,
-.main-buttons .start-chat-btn:hover,
-.main-buttons .download-resume-btn:hover {
-  width: 15.625rem; /* Expand horizontally on hover */
-  border-radius: 30px;
-  justify-content: flex-start;
-  padding-left: 20px;
+  font-size: 1.6rem;        /* Icon size */
+  transition: all 0.3s ease;
 }
 
 .main-buttons .home-btn span,
@@ -291,15 +285,10 @@ body {
 .main-buttons .download-resume-btn span {
   display: inline-block;
   white-space: nowrap;
-  overflow: hidden;
-  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  /*overflow: hidden;*/
+  /*transition: all 0.3s ease;*/
   margin-left: 10px;
-  opacity: 0;
-}
-
-.main-buttons .home-btn:hover span,
-.main-buttons .start-chat-btn:hover span,
-.main-buttons .download-resume-btn:hover span {
   opacity: 1;
 }
 
