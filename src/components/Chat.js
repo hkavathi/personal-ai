@@ -74,7 +74,7 @@ useEffect(() => {
           type="text"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="Type your message here..."
+          placeholder="Ask me anything about harshit..."
         />
         <button onClick={handleSend}>Send</button>
       </div>

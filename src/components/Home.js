@@ -8,7 +8,7 @@ function Home({ startChat }) {
       <div class="overlay"></div>
       <div className="home-content">
         <h1>Harshit Kavathia</h1>
-        <p>Welcome to my AI portfolio</p>
+        <p>Welcome to my AI-enabled portfolio</p>
         <div className="dynamic-text">
           <ReactTyped
             strings={[
