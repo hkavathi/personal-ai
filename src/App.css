@@ -205,9 +205,8 @@ body {
 }
 
 .social-btn svg {
-  display: block;         /* Ensure the icon is treated as a block element */
-  margin: 0 auto;         /* Horizontally center the icon */
-  font-size: 4rem;        /* Icon size */
+  margin-right: 10px; /* Add space between icon and text */
+  font-size: 2rem;        /* Icon size */
 }
 
 .social-btn:hover {
@@ -274,9 +273,8 @@ body {
 .main-buttons .home-btn svg,
 .main-buttons .start-chat-btn svg,
 .main-buttons .download-resume-btn svg {
-  display: block;         /* Ensure the icon is treated as a block element */
-  margin: 0 auto;         /* Horizontally center the icon */
-  font-size: 4rem;        /* Icon size */
+  margin-right: 10px; /* Add space between icon and text */
+  font-size: 2rem;        /* Icon size */
 }
 
 .main-buttons .home-btn:hover,
